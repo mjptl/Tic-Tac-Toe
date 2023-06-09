@@ -7,11 +7,11 @@ import zero from "./zero.png"
 const MessageContext =  createContext();
 
 
-const PlayGround = (props) => {
+const PlayGround = ({ turn, setTurn }) => {
     //var [matrix, setMatrix] = useState([...Array(3)].map(() => [...Array(3)].map(() => NaN)));
     //var matrix = Array(3).fill(Array(3).fill(undefined)); //https://stackoverflow.com/questions/59249783/update-a-2d-array-matrix-with-usestate-in-react
     var [matrix, setMatrix] = useState(Array.from({length: 3},()=> Array.from({length: 3}, () => null)));
-    var [turn, setTurn] = useState(true);
+    //var [turn, setTurn] = useState(true);
 
     const updateMatrix = (index, value) => {
         let row = Math.floor(index / 3)

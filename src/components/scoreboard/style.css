@@ -12,13 +12,23 @@
     width: 250px;
 }
 
+.its-my-turn {
+    color: #ffc400 !important;
+    background-color: #dfdfe6 !important;
+    font-size: 27px !important;
+}
+
 .turn-symbol{
-    height: 80px;
+    height: 60px;
     width: 120px;
     font-size: 20px;
-    color: #d4af37;
-    background-color: #cbcbd4;
+    color: #bd9c31;
+    background-color: #737374;
+    font-family: sans-serif;
     border-radius: 50px;
     margin-left: 20px;
     margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

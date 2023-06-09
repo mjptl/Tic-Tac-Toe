@@ -1,14 +1,18 @@
 import './App.css';
+import { useState } from 'react';
 import Background from './components/background/Background.js';
 import PlayGround from './components/playground/playground';
 import Scoreboard from './components/scoreboard/Scorebooad';
 
 function App() {
+
+  var [turn, setTurn] = useState(true);
+
   return (
     <div className="App">
       <Background>
-        <Scoreboard/>
-        <PlayGround/>
+        <Scoreboard turn={turn}/>
+        <PlayGround turn={turn} setTurn={setTurn}/>
       </Background>
     </div>
   );
