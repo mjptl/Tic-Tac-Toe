@@ -76,7 +76,7 @@ const Box = ({ val, index }) => {
     const imgSrc = val == 'X' ? cross : val == 'O' ? zero : null;
     return (
         <div className="box" onClick={onCellClick}>
-            {imgSrc && <img src={imgSrc} />}
+            {imgSrc && <img src={imgSrc} id='box_img'/>}
         </div>
     )
 } 

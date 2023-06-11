@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Background>
-        <Scoreboard turn={turn}/>
+        <Scoreboard turn={turn} setTurn={setTurn}/>
         <PlayGround turn={turn} setTurn={setTurn}/>
       </Background>
     </div>
