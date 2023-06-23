@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import './style.css'
 
-const Scoreboard = ({ turn, setTurn }) => {
+const Scoreboard = ({ turn, setTurn, winner }) => {
 
     const selectTurn = (symbol) => {
         if (document.getElementById('box_img')){

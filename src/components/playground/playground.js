@@ -1,25 +1,27 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext, useContext, useEffect } from "react";
 import "./style.css"
 import cross from "./cross.png"
 import zero from "./zero.png"
-
+import { checkWinner } from "./checkWinner";
 
 const MessageContext =  createContext();
 
 
-const PlayGround = ({ turn, setTurn }) => {
-    //var [matrix, setMatrix] = useState([...Array(3)].map(() => [...Array(3)].map(() => NaN)));
-    //var matrix = Array(3).fill(Array(3).fill(undefined)); //https://stackoverflow.com/questions/59249783/update-a-2d-array-matrix-with-usestate-in-react
+const PlayGround = ({ turn, setTurn, setWinner }) => {
     var [matrix, setMatrix] = useState(Array.from({length: 3},()=> Array.from({length: 3}, () => null)));
-    //var [turn, setTurn] = useState(true);
-
+    
     const updateMatrix = (index, value) => {
-        let row = Math.floor(index / 3)
-        let column = index % 3
+        var row = Math.floor(index / 3)
+        var column = index % 3
         let copy = [...matrix]
         copy[row][column] = value;
         setMatrix(copy);
-        setTurn(!turn) // change turn after updating the matrix
+        setTurn(!turn); // change turn after updating the matrix
+
+        let result = checkWinner(matrix, {row, column}, turn)
+        if(result){
+            setWinner(result);
+        }
     };
 
     return (
