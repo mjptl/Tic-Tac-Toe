@@ -55,6 +55,13 @@ export const checkWinner = (matrix, cell, turn) => {
             break
         }
     }
+
+    // check for tie
+    if(!matrix.some(row => row.includes(null))){
+        return 'Tie'
+    }
+
+
     if(result){
         return result
     }

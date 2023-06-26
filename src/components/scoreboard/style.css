@@ -1,5 +1,5 @@
 .main-scoreboard{
-    height: 200px;
+    height: 120px;
     width: 100%;
     margin: 0px auto 0px;
     position: relative;
@@ -27,7 +27,7 @@
     font-family: sans-serif;
     border-radius: 50px;
     margin-left: 20px;
-    margin-top: 100px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;

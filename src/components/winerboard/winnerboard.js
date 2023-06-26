@@ -8,7 +8,7 @@ const WinnerPopup = ({ winner }) => {
         return (
             <div className="winner-box">
                 <div class="popup-content">
-                        Winner is
+                        {(winner == 'Tie') ? '' : 'Winner is'}
                         <h1>
                             {winner}
                         </h1>
